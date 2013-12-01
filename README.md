@@ -7,7 +7,6 @@ The configuration for ruby tools: pry, etc
    LastChange: 2013-09-03 22:03:02  
 
 # Pry
-
 ## Installation:
 - pry:
        <pre><code>gem install pry</code></pre>
@@ -19,6 +18,17 @@ The configuration for ruby tools: pry, etc
     - Copy `.pryrc` and `.pry` from `RubyTools_Config_Marslo\pry` to `%USERPROFILE%`
 - Linux:
     - Copy `.pryrc` and `.pry` from `RubyTools_Config_Marslo\pry` to `$HOME`
+
+# RubyMine:
+## Settings:
+- Appearance
+    - Theme: Darcula
+    - Font: Consolas / 12
+- Editor
+    - Colors & Fonts:
+        - Primary Font: Consolas / 18 / 1.0
+    - Console Font:
+        - Primary Font: Conoslas / 14 / 1.0
 
 ## Reference
 - [HomePage](https://github.com/pry/pry)
