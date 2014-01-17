@@ -35,12 +35,6 @@ The configuration for ruby tools: pry, etc
 - [WiKi](https://github.com/pry/pry/wiki)
 - [Pry-Theme](https://github.com/kyrylo/pry-theme)
 
-# Rails Gems
-## gem install rmagick
-
-    # apt-get install build-essential imagemagick libmagickcore-dev libmagickwand-dev
-    # gem install rmagick
-
 ## Change source
 ### Commands
 
@@ -66,13 +60,78 @@ The configuration for ruby tools: pry, etc
 - `-a`: add
 - `-u`: update
 
-## Install ruby-openssl by manual
-### Installation
-<pre><code># cd <RUBY_SOURCE_PAT>/ext/openssl
+# Installation:
+
+## Ruby by source code
+### yaml
+
+    # wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
+    # tar xzf yaml-0.1.4.tar.gz
+    # cd yaml-0.1.4
+    # make --prefix=/usr/local
+    # make install
+
+### Ruby
+
+    # wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.zip
+    # unzip ruby-1.9.3-p484.zip
+    # cd ruby-1.9.3-p484
+    # ./configure --with-opt-dir=/usr/local/lib --enable-shared
+    # make && make install
+
+## Ruby Libs
+
+### ruby-openssl
+#### Installation
+
+    # cd <RUBY_SOURCE_PAT>/ext/openssl
     # ruby extconf.rb
     # make
     # sudo make install
-</code></pre>
-### Errors
-- `checking for openssl/ssl.h... no`
-- `# apt-get install libssl-dev libssl-doc`
+
+## Rails Gems
+### gem install rmagick
+
+    # apt-get install build-essential imagemagick libmagickcore-dev libmagickwand-dev
+    # gem install rmagick
+
+## Q&A Errors&Soluction
+
+### Ruby Enterprise 1.8.7-2012.02
+- Error: `make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1`
+- Soluction:
+    - Download [patch](https://gist.github.com/xibbar/3186499)
+    - Run `$ patch -p1 <PATH_OF_gistfile1.txt>`
+    - Run `$ sudo ./install`
+
+### Openssl
+- Error: `checking for openssl/ssl.h... no`
+- Soluction: `# apt-get install libssl-dev libssl-doc`
+
+### Mechanize
+- Error: `ERROR: Failed to build gem native extension` && `invalid switch in RUBYOPT: -F (RuntimeError)`
+- Soluction: `CMD> REG DELETE "HKCU\Software\Microsoft\Command Processor" /v AutoRun`
+
+----
+
+- Error: `libxml2 is missing`
+- Soluctoin: [Use ruby 1.9.3](http://stackoverflow.com/questions/16898286/error-invalid-switch-in-rubyopt-f-runtimeerror-is-shown-while-install-gems)
+
+### Gem in windows
+- Error: `ERROR: Error install <NAME>: The '<NAME>' native gem require installed build tools`
+- Soluction:
+    - Download and install [Devkit](http://rubyinstaller.org/downloads/)
+    <pre><code>> ruby dk.rb init
+    [INFO] found RubyInstaller v1.9.3 at C:/ruby193
+    Initialization complete! Please review and modify the auto-generated
+    'config.yml' file to ensure it contains the root directories to all
+    of the installed Rubies you want enhanced by the Devkit
+    > ruby dk.rb review
+    Based upon seetings in the 'config.yml' file generated
+    from running 'ruby dk.rb init' and any of your customizations,
+    DevKit functionlity will be injected into the following Rubies
+    when you run 'ruby dk.rb install'.
+    > ruby dk.rb install
+    [INFO] Updating convenience notice gem override fro 'C:/Ruby193'
+    [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/devkit.rb'
+    </code></pre>
