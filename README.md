@@ -67,15 +67,12 @@ The configuration for ruby tools: pry, etc
 - `-u`: update
 
 ## Install ruby-openssl by manual
-- Installation
-
-    # cd <RUBY_SOURCE_PAT>/ext/openssl
+### Installation
+<pre><code># cd <RUBY_SOURCE_PAT>/ext/openssl
     # ruby extconf.rb
     # make
     # sudo make install
-
-- Errors
-  - `checking for openssl/ssl.h... no`
-  - `# apt-get install libssl-dev libssl-doc`
-
-
+</code></pre>
+### Errors
+- `checking for openssl/ssl.h... no`
+- `# apt-get install libssl-dev libssl-doc`
