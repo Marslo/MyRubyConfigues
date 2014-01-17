@@ -37,9 +37,12 @@ The configuration for ruby tools: pry, etc
 
 # Rails Gems
 ## gem install rmagick
-<pre><code>apt-get install build-essential imagemagick libmagickcore-dev libmagickwand-dev</code></pre>
+
+    # apt-get install build-essential imagemagick libmagickcore-dev libmagickwand-dev
+    # gem install rmagick
 
 ## Change source
+### Commands
 
     $ gem source -l
     *** CURRENT SOURCES ***
@@ -55,4 +58,24 @@ The configuration for ruby tools: pry, etc
     $ gem source -l
     *** CURRENT SOURCES ***
     http://ruby.taobao.org
+
+### Note
+- Basic command: `gem source`
+- `-l`: list
+- `-r`: remove
+- `-a`: add
+- `-u`: update
+
+## Install ruby-openssl by manual
+- Installation
+
+    # cd <RUBY_SOURCE_PAT>/ext/openssl
+    # ruby extconf.rb
+    # make
+    # sudo make install
+
+- Errors
+  - `checking for openssl/ssl.h... no`
+  - `# apt-get install libssl-dev libssl-doc`
+
 
