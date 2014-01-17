@@ -31,6 +31,7 @@ The configuration for ruby and its tools: pry, RubyMine etc
         - Primary Font: Consolas / 18 / 1.0
     - Console Font:
         - Primary Font: Conoslas / 14 / 1.0
+
 # Installation:
 
 ## Ruby by source code
