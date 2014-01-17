@@ -70,7 +70,8 @@ The configuration for ruby and its tools: pry, RubyMine etc
 ## Q&A Errors&Soluction
 
 ### Ruby Enterprise 1.8.7-2012.02
-- Error: `make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1`
+- Error: 
+    <pre><code>make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1</code></pre>
 - Soluction:
     - Download [patch](https://gist.github.com/xibbar/3186499)
     - Run
@@ -100,7 +101,8 @@ The configuration for ruby and its tools: pry, RubyMine etc
 - Soluctoin: [Use ruby 1.9.3](http://stackoverflow.com/questions/16898286/error-invalid-switch-in-rubyopt-f-runtimeerror-is-shown-while-install-gems)
 
 ### Gem in windows
-- Error: `ERROR: Error install <NAME>: The '<NAME>' native gem require installed build tools`
+- Error: 
+    <pre><code>ERROR: Error install <NAME>: The '<NAME>' native gem require installed build tools</code></pre>
 - Soluction:
     - Download and install [Devkit](http://rubyinstaller.org/downloads/)
     - Run `init`, `review` and `install` as below
