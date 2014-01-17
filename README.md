@@ -1,10 +1,11 @@
 RubyTools
 =========
 
-The configuration for ruby tools: pry, etc
-       Author: Marslo  
-        Email: marslo.vida@gmail.com  
-   LastChange: 2013-09-03 22:03:02  
+The configuration for ruby and its tools: pry, RubyMine etc
+- Author: Marslo
+- Email: marslo.jiao@gmail.com
+- Init: 2013-09-03 22:03:02
+- LastChange: 2014-01-18 00:06:55
 
 ## Ruby Tools
 ### Pry
@@ -30,11 +31,6 @@ The configuration for ruby tools: pry, etc
         - Primary Font: Consolas / 18 / 1.0
     - Console Font:
         - Primary Font: Conoslas / 14 / 1.0
-#### Reference
-- [HomePage](https://github.com/pry/pry)
-- [WiKi](https://github.com/pry/pry/wiki)
-- [Pry-Theme](https://github.com/kyrylo/pry-theme)
-
 # Installation:
 
 ## Ruby by source code
@@ -84,21 +80,22 @@ The configuration for ruby tools: pry, etc
 ### Openssl
 - Error:
     <pre><code>checking for openssl/ssl.h... no</code></pre>
-- Soluction: 
+- Soluction:
     <pre><code># apt-get install libssl-dev libssl-doc</code></pre>
 
 ### Mechanize in windows
-- Error 
+- Error:
     <pre><code>ERROR: Failed to build gem native extension
     invalid switch in RUBYOPT: -F (RuntimeError)
     </code></pre>
-- Soluction
+- Soluction:
     -Run commands as below in CMD
     <pre><code>> REG DELETE "HKCU\Software\Microsoft\Command Processor" /v AutoRun</code></pre>
 
 ----
 
-- Error: `libxml2 is missing`
+- Error: 
+    <pre><code>libxml2 is missing</code></pre>
 - Soluctoin: [Use ruby 1.9.3](http://stackoverflow.com/questions/16898286/error-invalid-switch-in-rubyopt-f-runtimeerror-is-shown-while-install-gems)
 
 ### Gem in windows
@@ -146,3 +143,7 @@ The configuration for ruby tools: pry, etc
 - `-a`: add
 - `-u`: update
 
+## Reference
+- [HomePage](https://github.com/pry/pry)
+- [WiKi](https://github.com/pry/pry/wiki)
+- [Pry-Theme](https://github.com/kyrylo/pry-theme)
