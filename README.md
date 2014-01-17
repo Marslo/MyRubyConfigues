@@ -6,21 +6,22 @@ The configuration for ruby tools: pry, etc
         Email: marslo.vida@gmail.com  
    LastChange: 2013-09-03 22:03:02  
 
-# Pry
-## Installation:
+## Ruby Tools
+### Pry
+#### Installation:
 - pry:
-       <pre><code>gem install pry</code></pre>
+    <pre><code>gem install pry</code></pre>
 - pry-theme:
-       <pre><code>gem install pry-theme</code></pre>
+    <pre><code>gem install pry-theme</code></pre>
 
-## Usage
+#### Usage
 - Windows:
     - Copy `.pryrc` and `.pry` from `RubyTools_Config_Marslo\pry` to `%USERPROFILE%`
 - Linux:
     - Copy `.pryrc` and `.pry` from `RubyTools_Config_Marslo\pry` to `$HOME`
 
-# RubyMine:
-## Settings:
+### RubyMine:
+#### Settings:
 - Appearance
     - Theme: Darcula
     - Font: Consolas / 12
@@ -29,36 +30,10 @@ The configuration for ruby tools: pry, etc
         - Primary Font: Consolas / 18 / 1.0
     - Console Font:
         - Primary Font: Conoslas / 14 / 1.0
-
-## Reference
+#### Reference
 - [HomePage](https://github.com/pry/pry)
 - [WiKi](https://github.com/pry/pry/wiki)
 - [Pry-Theme](https://github.com/kyrylo/pry-theme)
-
-## Change source
-### Commands
-
-    $ gem source -l
-    *** CURRENT SOURCES ***
-    http://rubygems.org
-    $ gem source -r http://rubygems.org/
-    source http://rubygems.org not present in cache
-    $ gem source -l
-    *** CURRENT SOURCES ***
-    $ gem source -a http://ruby.taobao.org
-    http://ruby.taobao.org added to sources
-    $ gem source -u
-    source cache successfully updated
-    $ gem source -l
-    *** CURRENT SOURCES ***
-    http://ruby.taobao.org
-
-### Note
-- Basic command: `gem source`
-- `-l`: list
-- `-r`: remove
-- `-a`: add
-- `-u`: update
 
 # Installation:
 
@@ -145,3 +120,29 @@ The configuration for ruby tools: pry, etc
     [INFO] Updating convenience notice gem override fro 'C:/Ruby193'
     [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/devkit.rb'
     </code></pre>
+
+### Change Gem source
+#### Commands
+
+    $ gem source -l
+    *** CURRENT SOURCES ***
+    http://rubygems.org
+    $ gem source -r http://rubygems.org/
+    source http://rubygems.org not present in cache
+    $ gem source -l
+    *** CURRENT SOURCES ***
+    $ gem source -a http://ruby.taobao.org
+    http://ruby.taobao.org added to sources
+    $ gem source -u
+    source cache successfully updated
+    $ gem source -l
+    *** CURRENT SOURCES ***
+    http://ruby.taobao.org
+
+#### Note
+- Basic command: `gem source`
+- `-l`: list
+- `-r`: remove
+- `-a`: add
+- `-u`: update
+
