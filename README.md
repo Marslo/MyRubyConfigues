@@ -34,3 +34,25 @@ The configuration for ruby tools: pry, etc
 - [HomePage](https://github.com/pry/pry)
 - [WiKi](https://github.com/pry/pry/wiki)
 - [Pry-Theme](https://github.com/kyrylo/pry-theme)
+
+# Rails Gems
+## gem install rmagick
+<pre><code>apt-get install build-essential imagemagick libmagickcore-dev libmagickwand-dev</code></pre>
+
+## Change source
+
+    $ gem source -l
+    *** CURRENT SOURCES ***
+    http://rubygems.org
+    $ gem source -r http://rubygems.org/
+    source http://rubygems.org not present in cache
+    $ gem source -l
+    *** CURRENT SOURCES ***
+    $ gem source -a http://ruby.taobao.org
+    http://ruby.taobao.org added to sources
+    $ gem source -u
+    source cache successfully updated
+    $ gem source -l
+    *** CURRENT SOURCES ***
+    http://ruby.taobao.org
+
