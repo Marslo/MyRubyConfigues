@@ -38,6 +38,7 @@ The configuration for ruby and its tools: pry, RubyMine etc
 ### yaml
 
     # wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
+    ## Or copy it from <THIS_REPO>/Packages/yaml-0.1.4.tar.gz
     # tar xzf yaml-0.1.4.tar.gz
     # cd yaml-0.1.4
     # make --prefix=/usr/local
@@ -73,9 +74,10 @@ The configuration for ruby and its tools: pry, RubyMine etc
 - Error: 
     <pre><code>make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1</code></pre>
 - Soluction:
-    - Download [patch](https://gist.github.com/xibbar/3186499)
+    - Download [patch](https://gist.github.com/xibbar/3186499) or copy file from `<THIS_REPO>/Packages/Patch/gist3186499-e9f8578dab893d06830ee395a5045d6d3b000986.tar.gz`
     - Run
-    <pre><code>$ patch -p1 <PATH_OF_gistfile1.txt>
+    <pre><code>$ tar xzf <PATH_OF_gistfile.tar.gz>
+    $ patch -p1 <PATH_OF_gistfile.txt>
     $ sudo ./install
     </code></pre>
 
