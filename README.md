@@ -101,16 +101,25 @@ The configuration for ruby tools: pry, etc
 - Error: `make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1`
 - Soluction:
     - Download [patch](https://gist.github.com/xibbar/3186499)
-    - Run `$ patch -p1 <PATH_OF_gistfile1.txt>`
-    - Run `$ sudo ./install`
+    - Run
+    <pre><code>$ patch -p1 <PATH_OF_gistfile1.txt>
+    $ sudo ./install
+    </code></pre>
 
 ### Openssl
-- Error: `checking for openssl/ssl.h... no`
-- Soluction: `# apt-get install libssl-dev libssl-doc`
+- Error:
+    <pre><code>checking for openssl/ssl.h... no</code></pre>
+- Soluction: 
+    <pre><code># apt-get install libssl-dev libssl-doc</code></pre>
 
-### Mechanize
-- Error: `ERROR: Failed to build gem native extension` && `invalid switch in RUBYOPT: -F (RuntimeError)`
-- Soluction: `CMD> REG DELETE "HKCU\Software\Microsoft\Command Processor" /v AutoRun`
+### Mechanize in windows
+- Error 
+    <pre><code>ERROR: Failed to build gem native extension
+    invalid switch in RUBYOPT: -F (RuntimeError)
+    </code></pre>
+- Soluction
+    -Run commands as below in CMD
+    <pre><code>> REG DELETE "HKCU\Software\Microsoft\Command Processor" /v AutoRun</code></pre>
 
 ----
 
@@ -121,6 +130,7 @@ The configuration for ruby tools: pry, etc
 - Error: `ERROR: Error install <NAME>: The '<NAME>' native gem require installed build tools`
 - Soluction:
     - Download and install [Devkit](http://rubyinstaller.org/downloads/)
+    - Run `init`, `review` and `install` as below
     <pre><code>> ruby dk.rb init
     [INFO] found RubyInstaller v1.9.3 at C:/ruby193
     Initialization complete! Please review and modify the auto-generated
