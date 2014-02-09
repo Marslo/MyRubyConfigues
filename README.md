@@ -41,7 +41,8 @@ The configuration for ruby and its tools: pry, RubyMine etc
     ## Or copy it from <THIS_REPO>/Packages/yaml-0.1.4.tar.gz
     # tar xzf yaml-0.1.4.tar.gz
     # cd yaml-0.1.4
-    # make --prefix=/usr/local
+    # ./configure --prefix=/usr/local
+    # make
     # make install
 
 ### Ruby
