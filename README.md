@@ -71,8 +71,17 @@ The configuration for ruby and its tools: pry, RubyMine etc
 
 ## Q&A Errors&Soluction
 
+### Cannot migrate db
+- Error:
+    <pre><code>Mysql2::Error: All parts of a PRIMARY KEY must be NOT NULL; If you need NULL in a key, use UNIQUE instead: ...</code></pre>
+- Soluction:
+    Use [MySQL 5.6](http://dev.mysql.com/downloads/mysql/5.6.html)
+- Related Topics
+  - [rails-github: issue 13247](https://github.com/rails/rails/pull/13247)
+  - [rails-github: issue 13203](https://github.com/rails/rails/issues/13203)
+
 ### Ruby Enterprise 1.8.7-2012.02
-- Error: 
+- Error:
     <pre><code>make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1</code></pre>
 - Soluction:
     - Download [patch](https://gist.github.com/xibbar/3186499) or copy file from `<THIS_REPO>/Packages/Patch/gist3186499-e9f8578dab893d06830ee395a5045d6d3b000986.tar.gz`
@@ -99,12 +108,12 @@ The configuration for ruby and its tools: pry, RubyMine etc
 
 ----
 
-- Error: 
+- Error:
     <pre><code>libxml2 is missing</code></pre>
 - Soluctoin: [Use ruby 1.9.3](http://stackoverflow.com/questions/16898286/error-invalid-switch-in-rubyopt-f-runtimeerror-is-shown-while-install-gems)
 
 ### Gem in windows
-- Error: 
+- Error:
     <pre><code>ERROR: Error install <NAME>: The '<NAME>' native gem require installed build tools</code></pre>
 - Soluction:
     - Download and install [Devkit](http://rubyinstaller.org/downloads/)
