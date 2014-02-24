@@ -21,21 +21,9 @@ The configuration for ruby and its tools: pry, RubyMine etc
 - Linux:
     - Copy `.pryrc` and `.pry` from `RubyTools_Config_Marslo\pry` to `$HOME`
 
-### RubyMine:
-#### Settings:
-- Appearance
-    - Theme: Darcula
-    - Font: Consolas / 12
-- Editor
-    - Colors & Fonts:
-        - Primary Font: Consolas / 18 / 1.0
-    - Console Font:
-        - Primary Font: Conoslas / 14 / 1.0
-
-# Installation:
-
-## Ruby by source code
-### yaml
+## Installation
+### Ruby by source code
+#### yaml
 
     # wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
     ## Or copy it from <THIS_REPO>/Packages/yaml-0.1.4.tar.gz
@@ -45,7 +33,7 @@ The configuration for ruby and its tools: pry, RubyMine etc
     # make
     # make install
 
-### Ruby
+#### Ruby
 
     # wget http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.zip
     # unzip ruby-1.9.3-p484.zip
@@ -53,25 +41,24 @@ The configuration for ruby and its tools: pry, RubyMine etc
     # ./configure --with-opt-dir=/usr/local/lib --enable-shared
     # make && make install
 
-## Ruby Libs
 
-### ruby-openssl
-#### Installation
+### Ruby Libs
+#### ruby-openssl
+##### Installation
 
     # cd <RUBY_SOURCE_PAT>/ext/openssl
     # ruby extconf.rb
     # make
     # sudo make install
 
-## Rails Gems
-### gem install rmagick
+### Rails Gems
+#### gem install rmagick
 
     # apt-get install build-essential imagemagick libmagickcore-dev libmagickwand-dev
     # gem install rmagick
 
-## Q&A Errors&Soluction
-
-### Cannot migrate db
+### Q&A Errors&Soluction
+#### Cannot migrate db
 - Error:
     <pre><code>Mysql2::Error: All parts of a PRIMARY KEY must be NOT NULL; If you need NULL in a key, use UNIQUE instead: ...</code></pre>
 - Soluction:
@@ -80,7 +67,7 @@ The configuration for ruby and its tools: pry, RubyMine etc
   - [rails-github: issue 13247](https://github.com/rails/rails/pull/13247)
   - [rails-github: issue 13203](https://github.com/rails/rails/issues/13203)
 
-### Ruby Enterprise 1.8.7-2012.02
+#### Ruby Enterprise 1.8.7-2012.02
 - Error:
     <pre><code>make: *** [libtcmalloc_minimal_la-tcmalloc.lo] Error 1</code></pre>
 - Soluction:
@@ -91,13 +78,13 @@ The configuration for ruby and its tools: pry, RubyMine etc
     $ sudo ./install
     </code></pre>
 
-### Openssl
+#### Openssl
 - Error:
     <pre><code>checking for openssl/ssl.h... no</code></pre>
 - Soluction:
     <pre><code># apt-get install libssl-dev libssl-doc</code></pre>
 
-### Mechanize in windows
+#### Mechanize in windows
 - Error:
     <pre><code>ERROR: Failed to build gem native extension
     invalid switch in RUBYOPT: -F (RuntimeError)
@@ -112,7 +99,7 @@ The configuration for ruby and its tools: pry, RubyMine etc
     <pre><code>libxml2 is missing</code></pre>
 - Soluctoin: [Use ruby 1.9.3](http://stackoverflow.com/questions/16898286/error-invalid-switch-in-rubyopt-f-runtimeerror-is-shown-while-install-gems)
 
-### Gem in windows
+#### Gem in windows
 - Error:
     <pre><code>ERROR: Error install <NAME>: The '<NAME>' native gem require installed build tools</code></pre>
 - Soluction:
@@ -133,8 +120,8 @@ The configuration for ruby and its tools: pry, RubyMine etc
     [INFO] Installing 'C:/Ruby193/lib/ruby/site_ruby/devkit.rb'
     </code></pre>
 
-### Change Gem source
-#### Commands
+#### Change Gem source
+##### Commands
 
     $ gem source -l
     *** CURRENT SOURCES ***
@@ -151,14 +138,14 @@ The configuration for ruby and its tools: pry, RubyMine etc
     *** CURRENT SOURCES ***
     http://ruby.taobao.org
 
-#### Note
+##### Note
 - Basic command: `gem source`
 - `-l`: list
 - `-r`: remove
 - `-a`: add
 - `-u`: update
 
-## Reference
+### Reference
 - [HomePage](https://github.com/pry/pry)
 - [WiKi](https://github.com/pry/pry/wiki)
 - [Pry-Theme](https://github.com/kyrylo/pry-theme)
